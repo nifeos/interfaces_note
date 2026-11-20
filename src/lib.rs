@@ -37,7 +37,7 @@
 
 #![no_std]
 
-/// The note's owner string, without its NUL terminator. The sibling manifest-note crate holds the
+/// The note's owner string, without its null (NUL) terminator. The sibling manifest-note crate holds the
 /// same bytes; this crate repeats them so that it depends on nothing.
 const OWNER: &[u8] = b"nife"; // wire literal
 
@@ -253,7 +253,7 @@ impl Interfaces<'_> {
     /// entry equals `served`, and also when the program declares nothing about `interface`: a
     /// program without the entry runs as every program did before the note existed, and refusing it
     /// waits on packages carrying the stamp. A different version is a [`Refusal`] naming both. This
-    /// is equality, not set membership: the syscall ABI never dual-serves.
+    /// is equality, not set membership: the system call application binary interface (ABI) never dual-serves.
     ///
     /// ```
     /// use interfaces_note::{DeclaredInterface, decode_interfaces, encode_interfaces, descriptor_bytes};
