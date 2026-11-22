@@ -2,3 +2,6 @@
 #   src/lib.rs:4 # swapping the operand order is the same arithmetic
 # A line without a reason is refused, and a line naming a survivor that no longer exists is
 # refused too, so this list can only shrink by a diff that says why.
+src/lib.rs:73 # `i *= 1` keeps put4's loop counter at 0, so the loop never ends: a timeout, not a behavior a test can observe
+src/lib.rs:150 # `i *= 1` keeps encode_interfaces's loop counter at 0, so the loop never ends: a timeout, not a behavior a test can observe
+src/lib.rs:312 # `i *= 1` keeps InterfacesNote::of's loop counter at 0, so the loop never ends: a timeout, not a behavior a test can observe
