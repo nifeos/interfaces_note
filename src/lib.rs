@@ -36,6 +36,9 @@
 //! nothing it could have gained.
 
 #![no_std]
+// The crate holds no unsafe code. The `unsafe(link_section)` attribute in `carry_interfaces!`
+// expands in the program that calls the macro, never here.
+#![forbid(unsafe_code)]
 
 /// The note's owner string, without its null (NUL) terminator. The sibling manifest-note crate holds the
 /// same bytes; this crate repeats them so that it depends on nothing.
