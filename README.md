@@ -112,6 +112,18 @@ patch -R -p1 --no-backup-if-mismatch < falsifications/interface_verification.dec
 
 The failing run prints `VERIFICATION:- FAILED` and `cargo kani` exits 1.
 
+### Fuzzing
+
+The `fuzz/` crate feeds arbitrary bytes to `decode_interfaces` and checks that an accepted list
+encodes back to the same bytes and that `version_of` and `check_served` agree with its records. It
+needs nightly and `cargo install --locked cargo-fuzz --version 0.13.2`:
+
+```sh
+cargo +nightly fuzz run interfaces_decode fuzz/corpus/interfaces_decode fuzz/seeds/interfaces_decode
+```
+
+The weekly fuzz workflow runs it on a schedule.
+
 ## Using it
 
 The project has not published this crate, and publishing is on hold. No release tag exists yet.
