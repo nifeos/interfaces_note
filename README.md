@@ -1,9 +1,9 @@
 # interfaces_note
 
-[![check](https://github.com/nifeos/interfaces_note/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nifeos/interfaces_note/actions/workflows/ci.yml?query=branch%3Amain)
-[![proofs](https://github.com/nifeos/interfaces_note/actions/workflows/proofs.yml/badge.svg?branch=main)](https://github.com/nifeos/interfaces_note/actions/workflows/proofs.yml?query=branch%3Amain)
-[![license](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/nifeos/interfaces_note#license)
-[![minimum Rust version](https://img.shields.io/badge/rust-1.88%2B-blue.svg)](https://github.com/nifeos/interfaces_note/blob/main/Cargo.toml)
+[![check](https://github.com/partsfoundry/interfaces_note/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/partsfoundry/interfaces_note/actions/workflows/ci.yml?query=branch%3Amain)
+[![proofs](https://github.com/partsfoundry/interfaces_note/actions/workflows/proofs.yml/badge.svg?branch=main)](https://github.com/partsfoundry/interfaces_note/actions/workflows/proofs.yml?query=branch%3Amain)
+[![license](https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/partsfoundry/interfaces_note#license)
+[![minimum Rust version](https://img.shields.io/badge/rust-1.88%2B-blue.svg)](https://github.com/partsfoundry/interfaces_note/blob/main/Cargo.toml)
 
 The note that declares which interface versions a program was built against. A program carries one
 Executable and Linkable Format (ELF) note listing each interface it links as a pair of an id and a
@@ -131,7 +131,7 @@ Depend on it by git, pinned to a commit of this repository's `main` and never to
 
 ```toml
 [dependencies]
-interfaces_note = { git = "https://github.com/nifeos/interfaces_note", rev = "<full commit hash>" }
+interfaces_note = { git = "https://github.com/partsfoundry/interfaces_note", rev = "<full commit hash>" }
 ```
 
 Once a pre-release tag exists, use `tag = "<that tag>"` in place of `rev`.
